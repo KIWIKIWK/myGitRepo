@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <title>updatePost</title>
+</head>
+<body>
+    <a href="/"><h1>Python Flask Project WebSite</h1></a>
+    <form action="/updatePost/{{ pid }}" method="POST">
+        <p><input type="text" name="title" value="{{ title }}"></p>
+        <p><textarea name="content" cols="30" rows="10">{{ content }}</textarea></p>
+        <p><input type="submit" value="Update"></p>
+    </form>
+</body>
+</html>

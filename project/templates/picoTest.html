@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <article>
+        <header>
+            Header
+        </header>
+        <details>
+            <summary role="button" class="contrast">Accordion 1</summary>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+        </details>
+        <details role="list">
+            <summary aria-haspopup="listbox">Dropdown</summary>
+            <ul role="listbox">
+              <li><a>Action</a></li>
+              <li><a>Another action</a></li>
+              <li><a>Something else here</a></li>
+            </ul>
+        </details>
+        <details role="button">
+            <summary aria-haspopup="listbox">Dropdown</summary>
+            <ul role="listbox">
+              <li><a>Action</a></li>
+              <li><a>Another action</a></li>
+              <li><a>Something else here</a></li>
+            </ul>
+        </details>
+        <details role="list">
+            <summary aria-haspopup="listbox">Dropdown</summary>
+            <ul role="listbox">
+              <li>
+                <label for="small">
+                  <input type="radio" id="small" name="size" value="small">
+                  Small
+                </label>
+              </li>
+              <li>
+                <label for="medium">
+                  <input type="radio" id="medium" name="size" value="medium">
+                  Medium
+                </label>
+              </li>
+              <li>
+                <label for="large">
+                  <input type="radio" id="large" name="size" value="large">
+                  Large
+                </label>
+              </li>
+            </ul>
+        </details>
+        <details role="list">
+            <summary aria-haspopup="listbox">Dropdown</summary>
+            <ul role="listbox">
+              <li>
+                <label>
+                  <input type="checkbox">
+                  Banana
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox">
+                  Watermelon
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox">
+                  Apple
+                </label>
+              </li>
+            </ul>
+        </details>
+        <footer>
+            Header
+        </footer>
+    </article>
+  </body>
+</html>

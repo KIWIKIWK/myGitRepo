@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <title>selectUser</title>
+</head>
+<body>
+    <form action="/selectUser" method="POST">
+        <p><input type="text" name="sql" placeholder="sql" title="sql"></p>
+        <input type="submit" value="Enter">
+    </form>
+    {% for id, pw, nickname in result %}
+    <div>result : id - {{ id }}, pw - {{ pw }}, nickname - {{ nickname }}</div>
+    {% endfor %}
+</body>
+</html>

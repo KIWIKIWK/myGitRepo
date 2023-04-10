@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <title>Search</title>
+    <script>
+        const page_max= parseInt("{{page_info['page_max']}}");
+        const page_index= parseInt("{{page_info['page_index']}}");
+    </script>
+</head>
+<body>
+    <a href="/"><h1>Python Flask Project WebSite</h1></a>
+    <div>
+        <form action="/selectPost" method="POST">
+            <input type="text" name="title" title="title" placeholder="Search">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <ol>
+    {% if post_data|length != 0 %} 
+        {% for pid,title in post_data %}
+            <li><a href="/post/{{pid}}">{{ title }}</a></li>
+        {% endfor %}
+        <div>
+            <button id="pageLeft" type="button">Left</button>
+            <span id="pageIndex">{{ page_info["page_index"] }}</span>
+            <button id="pageRight" type="button">Right</button>
+        </div>
+    {% endif %}
+    </ol>
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="{{ url_for('static',filename='main.js')}}"></script>
+</body>
+</html>
