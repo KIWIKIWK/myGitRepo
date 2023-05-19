@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Toggle button animation</title>
+</head>
+<body>
+    <div class="toggle"></div>
+
+    <script>
+        let btn = document.querySelector(".toggle");
+        btn.addEventListener("click",()=>{
+            if(btn.classList.contains("active")){
+                btn.classList.remove("active");
+            }else{
+                btn.classList.add("active");
+            }
+        });
+    </script>
+</body>
+</html>

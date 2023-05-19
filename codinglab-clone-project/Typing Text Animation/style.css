@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+:root{
+  /* ===== Colors ===== */
+  --body-color: #f2f2f2;
+  --sidebar-color: #666666;
+  --primary-color: #4070f4;
+  --toggle-color: #0e4bf1;
+  --text-color: #ddd;
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+body.dark{
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+}
+
+body{
+  background-color: #010718;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  min-width: 330px;
+}
+.text{
+  font-size: 40px;
+  font-weight: 600;
+}
+.text1{
+  color:#fff;
+}
+.tiping{
+  position: relative;
+  color: #4070F4;
+}
+.tiping::before{
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 50px;
+  border-left: solid 3px #4070F4;
+  background-color: #010718;
+  top: 5px;
+  animation: tiping 4s infinite steps(12);
+}
+@keyframes tiping {
+  0%{
+    left:0%;
+  }
+  40%, 60%{
+    left: calc(100% + 4px);
+  }
+  100%{
+    left: 0%;
+  }
+}

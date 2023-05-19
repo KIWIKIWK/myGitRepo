@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+:root{
+  /* ===== Colors ===== */
+  --body-color: #f2f2f2;
+  --sidebar-color: #666666;
+  --primary-color: #4070f4;
+  --toggle-color: #0e4bf1;
+  --text-color: #ddd;
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+body.dark{
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+}
+
+body{
+  background-color: #f2f2f2;
+  display: flex;
+  position: relative;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* toast */
+.toast{
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  background-color: #fff;
+  top: 30px;
+  right: -500px;
+  border-left: solid 6px #4070f4;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: var(--tran-03);
+}
+.toast.active{
+  right:30px;
+}
+.toast-details{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 80px;
+}
+.content,.title{
+  font-size: 20px;
+}
+.content{
+  color: #666666;
+}
+.title{
+  font-weight: 600;
+}
+.bx-check{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left:20px;
+  background-color: #4070f4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bx-x{
+  position: absolute;
+  color:#666666;
+  top: 10px;
+  right: 10px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+
+/* progress-bar */
+.progress-bar{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  right: 0;
+  
+}
+
+.progress-bar::before{
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  right: 0;
+  content: "";
+  background-color: #4070f4;
+  width: 100%;
+}
+.progress-bar.active::before{
+  animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+  100%{
+    right: 100%;
+  }
+}
+
+/* toast */
+/* btn-toast */
+.btn-toast{
+  width: 150px;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+  background-color: #4070f4;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--tran-03);
+  cursor:pointer;
+}
+.btn-toast:active{
+  background-color: #0e4bf1;
+}
