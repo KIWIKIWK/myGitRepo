@@ -1,0 +1,310 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+ul{
+  list-style: none;
+}
+:root{
+  --body-color: #E4E9F7;
+  --sidebar-color: #FFF;
+  --primary-color: #695CFE;
+  --primary-color-light: #F6F5FF;
+  --toggle-color: #DDD;
+  --text-color: #707070;
+  --1-color:#87a5f8;
+  --2-color:#4070f4;
+  --3-color:#0e4bf1;
+  --4-color:#695CFE;
+  --5-color:#f2f2f2;
+  --6-color:#F6F5FF;
+  --7-color:#E4E9F7;
+  --8-color:#e0e0e0;
+  --9-color:#ccc;
+  --10-color:#DDD;
+  --11-color:#ddd;
+  --12-color:#E4E9F7;
+  --13-color:#666666;
+  --14-color:#707070;
+  --15-color:#999;
+  --16-color:#3a3b3c;
+  --17-color:#343F4F;
+  --18-color:#242526;
+  --19-color:#1d1b31;
+  --20-color:#18191a;
+  --21-color:#11101D;
+
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+body.dark{
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+}
+
+/* sidebar */
+
+/* sidebar close */
+.sidebar.close .sidebar-menu li,
+.sidebar.close .sidebar-menu input,
+.sidebar.close .sidebar-footer .toggle{
+  width: 54px;
+}
+.sidebar.close .sidebar-menu input{
+  padding-left: 54px;
+}
+.sidebar.close .sidebar-menu li{
+  left:13px;
+}
+.sidebar.close .sidebar-footer i {
+  display: none;
+}
+.sidebar.close .text,
+.sidebar.close .sidebar-footer .toggle i{
+  opacity: 0;
+}
+.sidebar.close .text{
+  left:50px;
+}
+.sidebar.close .sidebar-footer .switch{
+  left:17px;
+}
+
+/* sidebar close */
+
+/* sidebar hover */
+.sidebar-menu li:not(.menu-search):hover{
+  background-color: var(--primary-color);
+}
+.sidebar-menu li:not(.menu-search):hover .text,
+.sidebar-menu li:not(.menu-search):hover i{
+  color: #fff;
+}
+
+/* sidebar hover */
+
+
+.sidebar{
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  background-color: var(--sidebar-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--tran-03);
+}
+.sidebar.close{
+  width: 80px;
+}
+.text, i{
+  color: var(--text-color);
+}
+
+/* header */
+.sidebar-header{
+  width: 100%;
+  height:100px;
+  position: relative;
+}
+.sidebar-header .logo{
+  position: absolute;
+  top:15px;
+  left:15px;
+  font-size: 50px;
+  color: var(--primary-color);
+}
+.sidebar-header .header-name{
+  position: absolute;
+  top: 15px;
+  left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 27px;
+  white-space: nowrap;
+}
+.header-name .title{
+  font-size: 22px;
+  font-weight: 600;
+}
+.header-name .detail{
+  font-size: 18px;
+  font-weight: 400;
+}
+.sidebar-header .btn-close{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -13px;
+  background-color: var(--primary-color);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+/* header */
+
+/* menu */
+.sidebar-menu{
+  width: 100%;
+}
+.sidebar-menu li{
+  position: relative;
+  width: 254px;
+  height: 54px;
+  left:13px;
+  border-radius: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+.sidebar-menu li i,
+.sidebar-footer i{
+  position: absolute;
+  left:14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px;
+  z-index: 1;
+}
+.sidebar-menu li .text,
+.sidebar-footer .text{
+  position: absolute;
+  left: 67px;
+  top:50%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  font-size: 20px;
+  transition: var(--tran-03);
+}
+.sidebar-menu input{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 0;
+  height: 54px;
+  padding-left: 66px;
+  width: 254px;
+  font-weight: 500;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color-light);
+  border-radius: 8px;
+  transition: var(--tran-03);
+}
+/* menu */
+
+/* footer */
+.sidebar-footer{
+  position: absolute;
+  bottom: 13px;
+  width: 254px;
+}
+.sidebar-footer div{
+  position: relative;
+  height: 54px;
+  width: 254px;
+  left: 13px;
+  border-radius: 8px;
+  transition: var(--tran-03);
+  white-space: nowrap;
+}
+.sidebar-footer i{
+  left:14px;
+  z-index: 1;
+  transition: var(--tran-03);
+}
+.sidebar-footer .toggle{
+  background-color: var(--primary-color-light);
+}
+.toggle .toggle-switch{
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100% - 64px);
+  transition: var(--tran-03);
+}
+.toggle-switch .switch{
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+  background-color: var(--toggle-color);
+  width: 40px;
+  height: 22px;
+  cursor: pointer;
+}
+.toggle-switch .switch::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--sidebar-color);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: 5px;
+  transition: var(--tran-03);
+}
+.toggle-switch .switch.active::before{
+  left:20px;
+}
+/* footer */
+
+/* sidebar */
+
+.content{
+  position: relative;
+  top: 0;
+  left: 280px;
+  padding: 40px 60px;
+  background-color: var(--body-color);
+  height: 100vh;
+  width: calc(100% - 280px);
+  z-index: -10;
+  color: var(--text-color);
+  transition: var(--tran-03);
+}
+.sidebar.close ~ .content{
+  left: 80px;
+  width: calc(100% - 80px);
+}
+
+/* no transition when page first loaded */
+/* .sidebar,
+.sidebar-menu input,
+.sidebar-menu li,
+.sidebar-menu .text,
+.sidebar-footer .text,
+.sidebar-footer div,
+.sidebar-footer i,
+.toggle .toggle-switch,
+.toggle-switch .switch::before,
+.content{
+  transition: none !important;
+} */
