@@ -1,0 +1,14 @@
+read_url 이라는 함수는 어드민계정인 쿠키를 가지고 해당url에 접속해서 테스트 해보는 함수임
+오류가 나면 False를 반환하고 정상적으로 수행됬으면 True를 반환함.
+
+check_csrf는 param을 입력받아서 페이지에있는 vuln 페이지에 param값으로 넘겨주는 url값을 설정하고 이 url로 read_url을 실행시킴
+
+flag 페이지에서 값이 제출하게되면 위의 check_csrf를 실행하게됨. 입력값이 param으로 넘어감.
+오류가 나면 wrong이, 정상적으로 되었으면 good 을 띄워줌.
+
+
+/change_password?pw=admin&csrftoken=
+
+어드민 csrf토큰 코드 app.py 코드 해석하면 뭔지 알수있음그냥.
+
+<img src="/change_password?pw=admin&csrftoken=7505b9c72ab4aa94b1a4ed7b207b67fb">

